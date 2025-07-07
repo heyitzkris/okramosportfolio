@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Wave from 'react-wavify';
 
@@ -45,17 +45,18 @@ const projects = [
 ];
 
 function Gallery() {
+  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <div style={{
       display: 'flex',
       minHeight: '100vh',
-      backgroundColor: 'white',
+      backgroundColor: 'black',
       position: 'relative'
     }}>
       {/* Sidebar */}
       <div style={{
         width: '220px',
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         padding: '30px 20px',
         display: 'flex',
         flexDirection: 'column',
@@ -67,7 +68,7 @@ function Gallery() {
         <h1 style={{
           fontSize: '1.8rem',
           fontWeight: 700,
-          color: 'white',
+          color: 'black',
           marginBottom: '12px'
         }}>
           MY WORK
@@ -75,18 +76,18 @@ function Gallery() {
 
         <p style={{
           fontSize: '0.95rem',
-          color: 'white',
+          color: 'black',
           marginBottom: '30px',
           lineHeight: 1.4,
           marginTop: '0'
         }}>
-          A collection of my best works from my time in college — this gallery showcases my evolving work from my first to latest.
+          A collection of my best works from my time in college: this gallery showcases my evolving work from my first at the top to my latest at the bottom.
         </p>
 
         <Link to="/" style={{
           marginBottom: '20px',
           textDecoration: 'none',
-          color: 'white',
+          color: 'black',
           fontSize: '1.3rem',
           fontWeight: 500
         }}>
@@ -137,10 +138,10 @@ function Gallery() {
           maxWidth: '1000px',
           margin: '0 auto'
         }}>
-          {projects.map((project, index) => (
+{projects.map((project, index) => (
             <div key={index} style={{
-              backgroundColor: project.title === 'IN PROGRESS' ? 'black' : 'white',
-              color: project.title === 'IN PROGRESS' ? 'white' : 'black',
+              backgroundColor: project.title === 'IN PROGRESS' ? 'white' : 'white',
+              color: project.title === 'IN PROGRESS' ? 'black' : 'black',
               borderRadius: '8px',
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
               padding: '20px',
@@ -151,22 +152,85 @@ function Gallery() {
               justifyContent: 'center'
             }}>
               {project.title !== 'IN PROGRESS' && (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    borderRadius: '6px',
-                    marginBottom: '10px'
-                  }}
-                />
+                <>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '6px',
+                      marginBottom: '10px',
+                      cursor: 'pointer'
+                    }}
+                  />
+                  <button
+                    style={{
+                      alignSelf: 'flex-start',
+                      padding: '6px 12px',
+                      fontSize: '0.85rem',
+                      backgroundColor: 'red',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      marginBottom: '10px'
+                    }}
+                    onClick={() => setSelectedImage(project.image)} 
+                  >
+                    Zoom
+                  </button>
+                </>
               )}
               <h3 style={{ fontSize: '1.1rem', marginBottom: '8px' }}>{project.title}</h3>
               <p style={{ fontSize: '0.9rem', lineHeight: 1.4 }}>{project.description}</p>
             </div>
           ))}
         </div>
+
+       
+        {selectedImage && (
+          <div onClick={() => setSelectedImage(null)} style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 9999
+          }}>
+            <div onClick={(e) => e.stopPropagation()} style={{ position: 'relative' }}>
+              <button
+                onClick={() => setSelectedImage(null)}
+                style={{
+                  position: 'absolute',
+                  top: '-40px',
+                  right: '0',
+                  fontSize: '2rem',
+                  color: '#fff',
+                  background: 'transparent',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                ×
+              </button>
+              <img
+                src={selectedImage}
+                alt="Zoomed"
+                style={{
+                  maxWidth: '90vw',
+                  maxHeight: '90vh',
+                  boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
+                  borderRadius: '8px'
+                }}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

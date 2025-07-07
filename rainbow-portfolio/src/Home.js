@@ -25,7 +25,7 @@ function Home() {
   };
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', backgroundColor: 'white' }}>
+    <div style={{ position: 'relative', minHeight: '100vh', backgroundColor: 'black' }}>
       <div style={{
         display: 'flex',
         flexDirection: 'column',
@@ -59,7 +59,7 @@ function Home() {
               justifyContent: 'center'
             }}>
               <h1 style={{
-                color: 'black',
+                color: 'white',
                 fontSize: '1.6rem',
                 margin: 0
               }}>
