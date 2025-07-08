@@ -10,17 +10,17 @@ const projects = [
   },
   {
     title: '2. CAR COLOR SWAP',
-    description: 'The project above was one of my first time changing color on an object. The original car is the car in red which I changed to purple using Adobe Photoshop.',
+    description: 'The project above was one of my first times changing color on an object. The original car is the car in red which I changed to purple using Adobe Photoshop.',
     image: '/edited car.jpg'
   },
   {
     title: '3. POP ART CITY POSTER',
-    description: 'The posters above for New York and Seattle were a personal project that was created in Adobe Illustrator with Pop art style influence and fin with Adobe Photoshop.',
+    description: 'The posters above for New York and Seattle were a personal project that was created in Adobe Illustrator with Pop art style influence and finished with Adobe Photoshop.',
     image: '/city posters.jpg'
   },
   {
     title: '4. BOOK JACKET MOCKUPS',
-    description: 'The book jackets shown above were developed through mind mapping and sketches, built in Adobe InDesign and rendered in Adobe Photoshop.',
+    description: 'The book jackets shown above were developed through mind mapping and sketches that were later built in Adobe InDesign and rendered in Adobe Photoshop.',
     image: '/book jackets.jpg'
   },
   {
