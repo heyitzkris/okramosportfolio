@@ -4,47 +4,47 @@ import Wave from 'react-wavify';
 
 const projects = [
   {
-    title: 'COLOR HARMONY STICKERS',
+    title: '1. COLOR HARMONY STICKERS',
     description: 'This bunny-themed sticker set was a personal project based on color harmony. The stickers were designed in Adobe Illustrator and finished in Adobe Photoshop.',
     image: '/color harmony stickers.jpg'
   },
   {
-    title: 'CAR COLOR SWAP',
+    title: '2. CAR COLOR SWAP',
     description: 'The project above was one of my first time changing color on an object. The original car is the car in red which I changed to purple using Adobe Photoshop.',
     image: '/edited car.jpg'
   },
   {
-    title: 'POP ART IN CITY POSTER',
-    description: 'The posters above for New York and Seattle were a personal project that was created in Adobe Illustrator with Pop art style influence and finalized with Adobe Photoshop.',
+    title: '3. POP ART CITY POSTER',
+    description: 'The posters above for New York and Seattle were a personal project that was created in Adobe Illustrator with Pop art style influence and fin with Adobe Photoshop.',
     image: '/city posters.jpg'
   },
   {
-    title: 'MOCK UP BOOK JACKETS',
+    title: '4. BOOK JACKET MOCKUPS',
     description: 'The book jackets shown above were developed through mind mapping and sketches, built in Adobe InDesign and rendered in Adobe Photoshop.',
     image: '/book jackets.jpg'
   },
   {
-    title: 'FRUIT THEMED PLAYING CARDS',
+    title: '5. FRUIT THEMED PLAYING CARDS',
     description: 'This fruit themed card deck was a personal project made through a wide variety of sketches that were put into Adobe Illustrator and transfered into a card deck mock up in Adobe Photoshop.',
     image: '/fruit themed cards.jpg'
   },
   {
-    title: 'NATIONAL DONUT DAY MATT AND KIMS COFFEE SHOP',
+    title: '6. NATIONAL DONUT DAY MATT AND KIMS COFFEE SHOP',
     description: 'The project above was a national holiday campaign to bring in more customers for a pet-friendly coffee shop. I used National Donut Day as an inspiration to design social media posts, stickers, and mockups using Adobe Illustrator and Photoshop.',
     image: '/national donut day.jpg'
   },
   {
-    title: 'BLUEBERRY COSMETICS',
+    title: '7. BLUEBERRY COSMETICS',
     description: 'This set of cosmetic bottles was a project focused on brand identity. I built user profiles, built up my assets in Adobe Illustrator such as my color swatches and my own custom designs. After I gathered all my assets, I then rendered my designs in Adobe Dimension.',
     image: '/bluberry cosmetics mockup.jpg'
   },
   {
-    title: 'MODERN POOLS AD MOCK UP',
+    title: '8. MODERN POOLS AD MOCK UP',
     description: 'The project above is a mock up of an ad layout for a luxury pool brand, this was accomplished through sketches that were transfered into Adobe InDesign to be rendered out for transfer into Adobe Photoshop.',
     image: '/modern pools ad mockup.jpg'
   },
   {
-    title: 'TIDEWATER TRANSIT CO., INC BILLBOARD RECRUITMENT AD MOCKUP',
+    title: '9. TIDEWATER TRANSIT CO., INC BILLBOARD RECRUITMENT AD MOCKUP',
     description: 'This project is a mockup of a billboard recuitment ad that was made through multiple concept sketches, Adobe Illustrator, and Adobe Photoshop. ',
     image: '/BillboardMockup.jpg'
   },
@@ -75,24 +75,20 @@ function Gallery() {
         position: 'relative',
         zIndex: 2
       }}>
-        <h1 style={{
-          fontSize: '1.8rem',
-          fontWeight: 700,
-          color: 'black',
-          marginBottom: '12px'
-        }}>
-          MY WORK
-        </h1>
-
-        <p style={{
-          fontSize: '0.95rem',
-          color: 'black',
-          marginBottom: '30px',
-          lineHeight: 1.4,
-          marginTop: '0'
-        }}>
-          A collection of my best works from my time in college: this gallery showcases my evolving work from my first at the top to my latest at the bottom.
-        </p>
+<div className="gallery-list">
+  <h2>MY WORK</h2>
+  <ol className="project-list">
+<li>Color Harmony Stickers</li>
+<li>Car Color Swap</li>
+<li>Pop Art City Poster</li>
+<li>Book Jacket Mockups</li>
+<li>Fruit Themed Playing Cards</li>
+<li>National Donut Day: Matt and Kims Coffee Shop</li>
+<li>Blueberry Cosmetics</li>
+<li>Modern Pools Ad Mock Up</li>
+<li>Tidewater Transit Co., Inc: Billboard Recruitment Ad Mockup</li>
+  </ol>
+</div>
 
         <Link to="/" style={{
           marginBottom: '20px',
