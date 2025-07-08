@@ -9,34 +9,44 @@ const projects = [
     image: '/color harmony stickers.jpg'
   },
   {
+    title: 'CAR COLOR SWAP',
+    description: 'The project above was one of my first time changing color on an object. The original car is the car in red which I changed to purple using Adobe Photoshop.',
+    image: '/edited car.jpg'
+  },
+  {
     title: 'POP ART IN CITY POSTER',
-    description: 'The posters above for New York and Seattle were created in Adobe Illustrator with a Pop art design and finished with Adobe Photoshop.',
+    description: 'The posters above for New York and Seattle were a personal project that was created in Adobe Illustrator with Pop art style influence and finalized with Adobe Photoshop.',
     image: '/city posters.jpg'
   },
   {
     title: 'MOCK UP BOOK JACKETS',
-    description: 'The book jackets shown above were developed through mind mapping and sketches, built in Adobe InDesign and finished in Adobe Photoshop.',
+    description: 'The book jackets shown above were developed through mind mapping and sketches, built in Adobe InDesign and rendered in Adobe Photoshop.',
     image: '/book jackets.jpg'
   },
   {
     title: 'FRUIT THEMED PLAYING CARDS',
-    description: 'This fruit themed card deck was made through Adobe Illustrator and finished in Adobe Photoshop.',
+    description: 'This fruit themed card deck was a personal project made through a wide variety of sketches that were put into Adobe Illustrator and transfered into a card deck mock up in Adobe Photoshop.',
     image: '/fruit themed cards.jpg'
   },
   {
     title: 'NATIONAL DONUT DAY MATT AND KIMS COFFEE SHOP',
-    description: 'The project above was a branding campaign for a pet-friendly café. I used National Donut Day to bring in more customers and designed social media posts, stickers, and mockups using Adobe Illustrator and Photoshop.',
+    description: 'The project above was a national holiday campaign to bring in more customers for a pet-friendly coffee shop. I used National Donut Day as an inspiration to design social media posts, stickers, and mockups using Adobe Illustrator and Photoshop.',
     image: '/national donut day.jpg'
   },
   {
     title: 'BLUEBERRY COSMETICS',
-    description: 'This set of cosmetic bottles was a project focused on brand identity. Through packaging design I built user profiles, built up my assets in Adobe Illustrator and after getting approval from my client the designs were rendered in Adobe Dimension as seen above',
+    description: 'This set of cosmetic bottles was a project focused on brand identity. I built user profiles, built up my assets in Adobe Illustrator such as my color swatches and my own custom designs. After I gathered all my assets, I then rendered my designs in Adobe Dimension.',
     image: '/bluberry cosmetics mockup.jpg'
   },
   {
     title: 'MODERN POOLS AD MOCK UP',
-    description: 'The project above was an ad layout for a luxury pool brand done through sketches that were approved by my client transfered into Adobe InDesign to be rendered out for transfer into a mock up magazine using Adobe Photoshop',
+    description: 'The project above is a mock up of an ad layout for a luxury pool brand, this was accomplished through sketches that were transfered into Adobe InDesign to be rendered out for transfer into Adobe Photoshop.',
     image: '/modern pools ad mockup.jpg'
+  },
+  {
+    title: 'TIDEWATER TRANSIT CO., INC BILLBOARD RECRUITMENT AD MOCKUP',
+    description: 'This project is a mockup of a billboard recuitment ad that was made through multiple concept sketches, Adobe Illustrator, and Adobe Photoshop. ',
+    image: '/BillboardMockup.jpg'
   },
   {
     title: 'IN PROGRESS',
