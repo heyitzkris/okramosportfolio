@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Wave from 'react-wavify';
 
@@ -46,19 +46,6 @@ const projects = [
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const waveContainerRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (waveContainerRef.current) {
-        waveContainerRef.current.style.transform = `translateY(${window.scrollY * 0.5}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div style={{
       display: 'flex',
@@ -124,18 +111,6 @@ function Gallery() {
           height: '200px',
           overflow: 'hidden',
           zIndex: 0
-          {/* Moving Waves */}
-        <div
-          ref={waveContainerRef}
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            width: '100%',
-            height: '200px',
-            overflow: 'hidden',
-            zIndex: 0,
-            transition: 'transform 0.1s ease-out'
         }}>
           <Wave fill="#FF0000" paused={false} options={{ height: 40, amplitude: 30, speed: 0.2, points: 5 }}
             style={{ width: '100%', position: 'absolute', bottom: 0, opacity: 0.6, zIndex: 7 }} />
