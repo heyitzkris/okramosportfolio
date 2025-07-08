@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'FRUIT THEMED PLAYING CARDS',
-    description: 'This fruit themed card deck that was made through Adobe Illustrator and finished in Adobe Photoshop.',
+    description: 'This fruit themed card deck was made through Adobe Illustrator and finished in Adobe Photoshop.',
     image: '/fruit themed cards.jpg'
   },
   {
